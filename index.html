@@ -3,10 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>!!! Typing Game !!!</title>
+    <title>!!! Cota : Typing Game !!!</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <h1 id="title">CoTa</h1>
+      <div id="content">
+        <div id="sentences">
+          <div id="prev-sentence"></div>
+          <div id="sentence">
+            <div id="typing-sentence"></div>
+            <form action="submit">
+              <input id="typing-input" type="text" title="input" />
+            </form>
+          </div>
+          <div id="next-sentence"></div>
+        </div>
+        <div id="score-bubble">
+          <div id="socre-title">score</div>
+          <div id="score"></div>
+          <div id="hearts">
+            <div id="unit-heart"></div>
+            <div id="unit-heart"></div>
+            <div id="unit-heart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./src/app.js"></script>
   </body>
 </html>
