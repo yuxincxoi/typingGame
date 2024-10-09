@@ -1,7 +1,7 @@
-import initTime from "./modules/initTime.js";
-import loosingHeart from "./modules/loosingHeart.js";
-import randomExample from "./modules/randomExample.js";
-import clear from "./modules/clear.js";
+import initTime from "../modules/initTime.js";
+import loosingHeart from "../modules/loosingHeart.js";
+import randomExample from "../modules/randomExample.js";
+import clear from "../modules/clear.js";
 
 const root = document.getElementById("root");
 
@@ -54,6 +54,7 @@ timerBox.appendChild(timerp);
 let timerInterval = null; // 타이머 인터벌을 저장할 변수
 
 // element create
+const example = randomExample();
 expBox.appendChild(example);
 root.append(expBox, inputBox, scoreBox, chanceBox, timerBox);
 inputBox.appendChild(form);
