@@ -1,4 +1,4 @@
-export default initTime = () => {
+const initTime = () => {
   let i = 5;
   if (timerInterval) {
     clearInterval(timerInterval);
@@ -13,3 +13,5 @@ export default initTime = () => {
     }
   }, 1000);
 };
+
+export default initTime;

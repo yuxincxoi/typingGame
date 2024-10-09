@@ -1,4 +1,4 @@
-export default loosingHeart = () => {
+const loosingHeart = () => {
   if (chance > 0) {
     chance -= 1;
     localStorage.setItem("chance", chance);
@@ -22,3 +22,5 @@ export default loosingHeart = () => {
     }
   }
 };
+
+export default loosingHeart;
