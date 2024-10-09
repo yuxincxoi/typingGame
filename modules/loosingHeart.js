@@ -2,6 +2,7 @@ import { initTime } from "./initTime.js";
 
 const hearts = document.getElementById("hearts");
 let chance = 3;
+localStorage.setItem("chance", chance);
 
 const loosingHeart = () => {
   let timerInterval = null;
