@@ -1,4 +1,3 @@
-import data from "./data.js";
 import initTime from "./modules/initTime.js";
 import loosingHeart from "./modules/loosingHeart.js";
 import randomExample from "./modules/randomExample.js";
