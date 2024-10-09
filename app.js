@@ -57,23 +57,6 @@ root.append(expBox, inputBox, scoreBox, chanceBox, timerBox);
 inputBox.appendChild(form);
 form.append(input, btn, reset);
 
-// 타이머 초기화 함수
-function startTimer() {
-  let i = 5;
-  if (timerInterval) {
-    clearInterval(timerInterval);
-  }
-  timerInterval = setInterval(() => {
-    timerp.innerText = `Timer : ${i}`;
-    i -= 1;
-    if (i < 0) {
-      clearInterval(timerInterval);
-      timerInterval = null;
-      LoosingHeart();
-    }
-  }, 1000);
-}
-
 // Enter를 눌렀을 때
 form.addEventListener("submit", (e) => {
   if (input.value === example.innerText) {
@@ -86,7 +69,7 @@ form.addEventListener("submit", (e) => {
     // 입력창 초기화
     input.value = "";
     // 타이머 초기화
-    startTimer();
+    initTime();
   } else {
     // 입력 값이 문장과 다르면
     LoosingHeart();
@@ -103,7 +86,7 @@ reset.addEventListener("click", () => {
 // Start 버튼을 눌렀을 때
 startBtn.addEventListener("click", () => {
   // 타이머 시작
-  startTimer();
+  initTime();
 });
 
 // 생명
@@ -114,7 +97,7 @@ function LoosingHeart() {
     chancep.innerText = `Chance : ${localStorage.getItem("chance")}`;
     if (chance > 0) {
       // 생명이 남아있는 경우
-      startTimer(); // 타이머를 다시 초기화
+      initTime(); // 타이머를 다시 초기화
     } else {
       // 생명이 다된 경우
       alert("Game Over !");
