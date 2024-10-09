@@ -5,6 +5,8 @@ const randomExample = () => {
 
   const randomData = data[Math.floor(Math.random() * data.length)];
   example.innerText = randomData;
+
+  return example;
 };
 
 export default randomExample;
