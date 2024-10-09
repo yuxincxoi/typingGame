@@ -2,6 +2,7 @@ import data from "./data.js";
 import initTime from "./modules/initTime.js";
 import loosingHeart from "./modules/loosingHeart.js";
 import randomExample from "./modules/randomExample.js";
+import clear from "./modules/clear.js";
 
 const root = document.getElementById("root");
 
@@ -83,7 +84,7 @@ form.addEventListener("submit", (e) => {
 //  Reset을 눌렀을 때
 reset.addEventListener("click", () => {
   // 모든 값 초기화
-  Clear();
+  clear();
 });
 
 // Start 버튼을 눌렀을 때
@@ -99,22 +100,4 @@ function Timer(onOff) {
     timerInterval = null;
     console.log("bye");
   }
-}
-
-// reset
-function Clear() {
-  input.value = "";
-  localStorage.clear();
-  localStorage.setItem("score", 0);
-  localStorage.setItem("chance", 3);
-  score = 0;
-  chance = 3;
-  scorep.innerText = `점수 : ${localStorage.getItem("score")}`;
-  chancep.innerText = `Chance : ${localStorage.getItem("chance")}`;
-  // 타이머 중지
-  if (timerInterval) {
-    clearInterval(timerInterval);
-    timerInterval = null;
-  }
-  timerp.innerText = `Timer : 0`;
 }
