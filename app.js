@@ -1,6 +1,7 @@
 import data from "./data.js";
 import initTime from "./modules/initTime.js";
 import loosingHeart from "./modules/loosingHeart.js";
+import randomExample from "./modules/randomExample.js";
 
 const root = document.getElementById("root");
 
@@ -26,7 +27,7 @@ startBtn.value = "Start";
 // 추가된 스타트 버튼
 inputBox.appendChild(startBtn);
 
-RandomExample();
+randomExample();
 
 // 점수
 const scoreBox = document.createElement("div");
@@ -67,7 +68,7 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("score", score);
     scorep.innerText = `점수 : ${localStorage.getItem("score")}`;
     // 다음 문장 할당
-    RandomExample();
+    randomExample();
     // 입력창 초기화
     input.value = "";
     // 타이머 초기화
@@ -98,12 +99,6 @@ function Timer(onOff) {
     timerInterval = null;
     console.log("bye");
   }
-}
-
-// 받아쓰기 문장 랜덤 할당
-function RandomExample() {
-  const randomData = data[Math.floor(Math.random() * data.length)];
-  example.innerText = randomData;
 }
 
 // reset
