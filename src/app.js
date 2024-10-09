@@ -16,8 +16,10 @@ startBtn.value = "Start";
 
 root.append(startBtn, timer);
 
-
-randomExample();
+window.onload = () => {
+  typingSentence.innerText = randomExample();
+  initTime();
+};
 
 localStorage.setItem("score", 0);
 scorep.innerText = `점수 : ${localStorage.getItem("score")}`;
