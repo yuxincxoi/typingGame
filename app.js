@@ -1,4 +1,6 @@
 import data from "./data.js";
+import initTime from "./initTime.js";
+import loosingHeart from "./loosingHeart.js";
 
 const root = document.getElementById("root");
 
@@ -72,7 +74,7 @@ form.addEventListener("submit", (e) => {
     initTime();
   } else {
     // 입력 값이 문장과 다르면
-    LoosingHeart();
+    loosingHeart();
   }
   e.preventDefault();
 });
@@ -88,32 +90,6 @@ startBtn.addEventListener("click", () => {
   // 타이머 시작
   initTime();
 });
-
-// 생명
-function LoosingHeart() {
-  if (chance > 0) {
-    chance -= 1;
-    localStorage.setItem("chance", chance);
-    chancep.innerText = `Chance : ${localStorage.getItem("chance")}`;
-    if (chance > 0) {
-      // 생명이 남아있는 경우
-      initTime(); // 타이머를 다시 초기화
-    } else {
-      // 생명이 다된 경우
-      alert("Game Over !");
-      if (timerInterval) {
-        clearInterval(timerInterval);
-        timerInterval = null;
-      }
-    }
-  } else if (chance === 0) {
-    alert("Game Over !");
-    if (timerInterval) {
-      clearInterval(timerInterval);
-      timerInterval = null;
-    }
-  }
-}
 
 // 타이머
 function Timer(onOff) {
