@@ -1,16 +1,17 @@
-const input = document.createElement("input");
-const scorep = document.createElement("p");
+const typingInput = document.getElementById("typing-input");
+const totalScore = document.getElementById("total-score");
+const hearts = document.getElementById("hearts");
 let score = 0;
 
 const clear = () => {
-  input.value = "";
+  typingInput.value = "";
   localStorage.clear();
   localStorage.setItem("score", 0);
   localStorage.setItem("chance", 3);
   score = 0;
   let chance = 3;
-  scorep.innerText = `점수 : ${localStorage.getItem("score")}`;
-  chancep.innerText = `Chance : ${localStorage.getItem("chance")}`;
+  totalScore.innerText = `점수 : ${localStorage.getItem("score")}`;
+  hearts.innerText = `Chance : ${localStorage.getItem("chance")}`;
   // 타이머 중지
   if (timerInterval) {
     clearInterval(timerInterval);
@@ -19,4 +20,4 @@ const clear = () => {
   timerp.innerText = `Timer : 0`;
 };
 
-export { clear, input, score, scorep };
+export { clear, score };
