@@ -16,8 +16,6 @@ startBtn.value = "Start";
 
 root.append(startBtn, timer);
 
-// 추가된 스타트 버튼
-inputBox.appendChild(startBtn);
 
 randomExample();
 
