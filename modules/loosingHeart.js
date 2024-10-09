@@ -1,4 +1,10 @@
+import { initTime } from "./initTime.js";
+
+let chance = 3;
+const chancep = document.createElement("p");
+
 const loosingHeart = () => {
+  let timerInterval = null;
   if (chance > 0) {
     chance -= 1;
     localStorage.setItem("chance", chance);
@@ -23,4 +29,4 @@ const loosingHeart = () => {
   }
 };
 
-export default loosingHeart;
+export { loosingHeart, chance, chancep };
