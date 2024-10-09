@@ -1,6 +1,6 @@
 import data from "./data.js";
-import initTime from "./initTime.js";
-import loosingHeart from "./loosingHeart.js";
+import initTime from "./modules/initTime.js";
+import loosingHeart from "./modules/loosingHeart.js";
 
 const root = document.getElementById("root");
 
