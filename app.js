@@ -7,7 +7,6 @@ const root = document.getElementById("root");
 
 // 받아쓰기 문장
 const expBox = document.createElement("div");
-const example = document.createElement("p");
 
 // 입력 form
 const inputBox = document.createElement("div");
