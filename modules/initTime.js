@@ -4,8 +4,15 @@ const timer = document.getElementById("timer");
 let timerInterval = null; // 타이머 인터벌을 저장할 변수
 let i = 5;
 
-const initTime = () => {
+const initTime = (isGameOver = false) => {
   clearInterval(timerInterval);
+
+  if (isGameOver) {
+    i = 0;
+    timer.innerText = `Timer : ${i}`;
+    return; // Game Over 상태에서는 타이머를 더 이상 실행하지 않음
+  }
+
   i = 5;
   timer.innerText = `Timer : ${i}`;
 

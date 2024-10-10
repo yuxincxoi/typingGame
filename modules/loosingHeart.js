@@ -16,10 +16,12 @@ const loosingHeart = () => {
     } else {
       // 생명이 다된 경우
       alert("Game Over !");
+      initTime(true);
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
       }
+      document.getElementById("timer").innerText = "Timer : 0";
     }
   } else if (chance === 0) {
     alert("Game Over !");
