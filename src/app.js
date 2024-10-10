@@ -1,7 +1,7 @@
 import { initTime, timer } from "../modules/initTime.js";
 import { loosingHeart } from "../modules/loosingHeart.js";
 import { randomExample } from "../modules/randomExample.js";
-import { clear, score } from "../modules/clear.js";
+import { clear } from "../modules/clear.js";
 
 const form = document.querySelector("form");
 const typingInput = document.getElementById("typing-input");
@@ -21,12 +21,13 @@ window.onload = () => {
   initTime();
 };
 
+let score = 0;
 // Enter를 눌렀을 때
 form.addEventListener("submit", (e) => {
   if (typingInput.value === typingSentence.innerText) {
     // 입력 값이 문장과 같으면
-    totalScore += 5;
-    localStorage.setItem("score", totalScore);
+    score += 5;
+    localStorage.setItem("score", score);
     totalScore.innerText = `점수 : ${localStorage.getItem("score")}`;
     // 다음 문장 할당
     randomExample();

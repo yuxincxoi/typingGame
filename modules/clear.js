@@ -19,4 +19,4 @@ const clear = () => {
   }
 };
 
-export { clear, score };
+export { clear };
