@@ -46,24 +46,3 @@ form.addEventListener("submit", (e) => {
   }
   e.preventDefault();
 });
-
-//  Reset을 눌렀을 때
-reset.addEventListener("click", () => {
-  // 모든 값 초기화
-  clear();
-});
-
-// Start 버튼을 눌렀을 때
-startBtn.addEventListener("click", () => {
-  // 타이머 시작
-  initTime();
-});
-
-// 타이머
-function Timer(onOff) {
-  if (!onOff && timerInterval) {
-    clearInterval(timerInterval);
-    let timerInterval = null;
-    console.log("bye");
-  }
-}
