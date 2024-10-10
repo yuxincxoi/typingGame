@@ -22,7 +22,7 @@ window.onload = () => {
 };
 
 localStorage.setItem("score", 0);
-scorep.innerText = `점수 : ${localStorage.getItem("score")}`;
+totalScore.innerText = `점수 : ${localStorage.getItem("score")}`;
 
 localStorage.setItem("chance", chance);
 chancep.innerText = `Chance : ${localStorage.getItem("chance")}`;
