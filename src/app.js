@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
     // 입력 값이 문장과 같으면
     score += 5;
     localStorage.setItem("score", score);
-    totalScore.innerText = `점수 : ${localStorage.getItem("score")}`;
+    totalScore.innerText = `${localStorage.getItem("score")}`;
     // 다음 문장 할당
     typingSentence.innerText = randomExample();
     // 입력창 초기화

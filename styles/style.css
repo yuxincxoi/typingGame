@@ -1,0 +1,86 @@
+h1 {
+  font-weight: 900;
+  font-size: 60px;
+  width: 40px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+#content {
+  display: flex;
+}
+
+#sentences {
+  width: 70%;
+  margin: auto;
+  padding-left: 300px;
+}
+
+#score-bubble {
+  width: 300px;
+  height: 250px;
+  background-color: bisque;
+}
+
+#prev-sentence {
+  background-color: #f0f0f0;
+  width: 800px;
+  height: 50px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+#next-sentence {
+  background-color: #f0f0f0;
+  width: 800px;
+  height: 50px;
+  margin: auto;
+  margin-top: 35px;
+  border-radius: 20px;
+}
+
+#sentence {
+  width: 900px;
+  height: 100px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#typing-sentence {
+  background-color: #89c664;
+  height: 55px;
+  line-height: 55px;
+  padding-left: 18px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#typing-input {
+  width: 880px;
+  height: 50px;
+  padding-left: 15px;
+  border-radius: 20px;
+  border: 3px #89c664 solid;
+  outline: none;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#score-container {
+  width: 100px;
+  margin: auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+#score-title {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+#total-score {
+  font-size: 64px;
+  font-weight: 800;
+}
