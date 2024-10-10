@@ -17,7 +17,6 @@ const clear = () => {
     clearInterval(timerInterval);
     timerInterval = null;
   }
-  timerp.innerText = `Timer : 0`;
 };
 
 export { clear, score };

@@ -21,18 +21,12 @@ window.onload = () => {
   initTime();
 };
 
-localStorage.setItem("score", 0);
-totalScore.innerText = `점수 : ${localStorage.getItem("score")}`;
-
-localStorage.setItem("chance", chance);
-chancep.innerText = `Chance : ${localStorage.getItem("chance")}`;
-
 // Enter를 눌렀을 때
 form.addEventListener("submit", (e) => {
   if (typingInput.value === typingSentence.innerText) {
     // 입력 값이 문장과 같으면
-    score += 5;
-    localStorage.setItem("score", score);
+    totalScore += 5;
+    localStorage.setItem("score", totalScore);
     totalScore.innerText = `점수 : ${localStorage.getItem("score")}`;
     // 다음 문장 할당
     randomExample();

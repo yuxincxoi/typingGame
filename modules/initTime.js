@@ -1,7 +1,6 @@
 import { loosingHeart } from "./loosingHeart.js";
 
-const timer = document.createElement("p");
-timer.id = "timer";
+const timer = document.getElementById("timer");
 
 const initTime = () => {
   let timerInterval = null; // 타이머 인터벌을 저장할 변수
