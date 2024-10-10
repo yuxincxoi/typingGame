@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>!!! Cota : Typing Game !!!</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <a href="/">HOME</a>
+    <div id="root">
+      <h1 id="title">CoTa</h1>
+      <div id="content">
+        <div id="sentences">
+          <div id="prev-sentence"></div>
+          <div id="sentence">
+            <div id="typing-sentence"></div>
+            <form>
+              <input id="typing-input" type="text" title="input" autofocus />
+              <input id="submit-button" type="button" value="Enter" hidden />
+            </form>
+          </div>
+          <div id="next-sentence"></div>
+        </div>
+        <div id="score-bubble">
+          <div id="score-container">
+            <div id="score-title">score</div>
+            <div id="total-score">0</div>
+            <div id="hearts">
+              Chance : 3
+              <div id="unit-heart"></div>
+              <div id="unit-heart"></div>
+              <div id="unit-heart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="timer">Timer Start !</p>
+    </div>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
