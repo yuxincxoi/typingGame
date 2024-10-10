@@ -13,7 +13,7 @@ const initTime = () => {
     i -= 1;
     timer.innerText = `Timer : ${i}`;
 
-    if (i < 0) {
+    if (i <= 0) {
       clearInterval(timerInterval);
       loosingHeart();
     }
