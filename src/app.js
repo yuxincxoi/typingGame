@@ -30,7 +30,7 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("score", score);
     totalScore.innerText = `점수 : ${localStorage.getItem("score")}`;
     // 다음 문장 할당
-    randomExample();
+    typingSentence.innerText = randomExample();
     // 입력창 초기화
     typingInput.value = "";
     // 타이머 초기화
