@@ -38,6 +38,7 @@ form.addEventListener("submit", (e) => {
   } else {
     // 입력 값이 문장과 다르면
     loosingHeart();
+    typingInput.value = "";
   }
   e.preventDefault();
 });
