@@ -26,8 +26,7 @@ let score = 0;
 form.addEventListener("submit", (e) => {
   if (typingInput.value === typingSentence.innerText) {
     // 입력 값이 문장과 같으면
-    const randomArray = randomExample();
-    console.log(randomArray);
+    const sentence = randomExample();
     score += 5;
     localStorage.setItem("score", score);
     totalScore.innerText = `${localStorage.getItem("score")}`;
