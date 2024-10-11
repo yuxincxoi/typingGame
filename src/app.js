@@ -18,14 +18,18 @@ root.append(startBtn, timer);
 
 const sentence = randomExample();
 
-window.onload = () => {
-  typingSentence.innerText = sentence[0];
-  nextSentence.innerText = sentence[1];
-  initTime();
-};
-
 let score = 0;
 let i = 0;
+
+window.onload = () => {
+  typingSentence.innerText = sentence[i];
+  nextSentence[0].innerText = sentence[i + 1];
+  nextSentence[1].innerText = sentence[i + 2];
+  nextSentence[2].innerText = sentence[i + 3];
+  nextSentence[3].innerText = sentence[i + 4];
+  nextSentence[4].innerText = sentence[i + 5];
+  initTime();
+};
 
 // Enter를 눌렀을 때
 form.addEventListener("submit", (e) => {
