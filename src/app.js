@@ -17,7 +17,7 @@ startBtn.value = "Start";
 root.append(startBtn, timer);
 
 window.onload = () => {
-  typingSentence.innerText = randomExample();
+  typingSentence.innerText = "hi";
   initTime();
 };
 
@@ -26,11 +26,13 @@ let score = 0;
 form.addEventListener("submit", (e) => {
   if (typingInput.value === typingSentence.innerText) {
     // 입력 값이 문장과 같으면
+    const randomArray = randomExample();
+    console.log(randomArray);
     score += 5;
     localStorage.setItem("score", score);
     totalScore.innerText = `${localStorage.getItem("score")}`;
     // 다음 문장 할당
-    typingSentence.innerText = randomExample();
+    typingSentence.innerText = "hello";
     // 입력창 초기화
     typingInput.value = "";
     // 타이머 초기화
