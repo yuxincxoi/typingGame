@@ -19,8 +19,8 @@ const loosingHeart = () => {
       initTime(); // 타이머를 다시 초기화
     } else {
       // 생명이 다된 경우
-      alert("Game Over !");
       initTime(true);
+      window.location.href = "/over";
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
@@ -28,7 +28,7 @@ const loosingHeart = () => {
       document.getElementById("timer").innerText = "Timer : 0";
     }
   } else if (chance === 0) {
-    alert("Game Over !");
+    window.location.href = "/over";
     if (timerInterval) {
       clearInterval(timerInterval);
       timerInterval = null;
