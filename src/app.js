@@ -4,6 +4,8 @@ import { randomExample } from "../modules/randomExample.js";
 import { clear } from "../modules/clear.js";
 
 const form = document.querySelector("form");
+const prevSentence = document.getElementById("prev-sentence");
+const nextSentence = document.getElementById("next-sentence");
 const typingInput = document.getElementById("typing-input");
 const typingSentence = document.getElementById("typing-sentence");
 const totalScore = document.getElementById("total-score");
