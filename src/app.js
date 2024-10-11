@@ -37,7 +37,11 @@ form.addEventListener("submit", (e) => {
     // 다음 문장 할당
     prevSentence.innerText = sentence[i];
     typingSentence.innerText = sentence[i + 1];
-    nextSentence.innerText = sentence[i + 2];
+    nextSentence[0].innerText = sentence[i + 2];
+    nextSentence[1].innerText = sentence[i + 3];
+    nextSentence[2].innerText = sentence[i + 4];
+    nextSentence[3].innerText = sentence[i + 5];
+    nextSentence[4].innerText = sentence[i + 6];
     i++;
     // 입력창 초기화
     typingInput.value = "";
