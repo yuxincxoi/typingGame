@@ -21,7 +21,8 @@ root.append(startBtn, timer);
 const sentence = randomExample();
 
 window.onload = () => {
-  typingSentence.innerText = "hi";
+  typingSentence.innerText = sentence[0];
+  nextSentence.innerText = sentence[1];
   initTime();
 };
 
