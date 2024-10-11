@@ -25,6 +25,7 @@ window.onload = () => {
 };
 
 let score = 0;
+let i = 0;
 
 // Enter를 눌렀을 때
 form.addEventListener("submit", (e) => {
@@ -34,7 +35,10 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("score", score);
     totalScore.innerText = `${localStorage.getItem("score")}`;
     // 다음 문장 할당
-    typingSentence.innerText = "hello";
+    prevSentence.innerText = sentence[i];
+    typingSentence.innerText = sentence[i + 1];
+    nextSentence.innerText = sentence[i + 2];
+    i++;
     // 입력창 초기화
     typingInput.value = "";
     // 타이머 초기화
