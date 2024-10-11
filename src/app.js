@@ -18,6 +18,8 @@ startBtn.value = "Start";
 
 root.append(startBtn, timer);
 
+const sentence = randomExample();
+
 window.onload = () => {
   typingSentence.innerText = "hi";
   initTime();
@@ -28,7 +30,6 @@ let score = 0;
 form.addEventListener("submit", (e) => {
   if (typingInput.value === typingSentence.innerText) {
     // 입력 값이 문장과 같으면
-    const sentence = randomExample();
     score += 5;
     localStorage.setItem("score", score);
     totalScore.innerText = `${localStorage.getItem("score")}`;
