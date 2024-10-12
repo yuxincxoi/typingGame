@@ -21,6 +21,8 @@ const sentence = randomExample();
 let score = 0;
 let i = 0;
 
+localStorage.setItem("score", score);
+
 window.onload = () => {
   typingSentence.innerText = sentence[i];
   nextSentence[0].innerText = sentence[i + 1];
