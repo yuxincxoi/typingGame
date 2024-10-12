@@ -1,4 +1,34 @@
-h1 {
+#title {
+  font-weight: 900;
+  font-size: 100px;
+}
+
+#how-to-play {
+  border: 1px solid black;
+  width: 120px;
+  height: 50px;
+}
+
+#rules {
+  display: none;
+}
+
+#game-over {
+  font-weight: 900;
+  font-size: 70px;
+}
+
+#final-score-title {
+  font-weight: 200;
+  font-size: 25px;
+}
+
+#final-score {
+  font-weight: 900;
+  font-size: 65px;
+}
+
+#main-title {
   font-weight: 900;
   font-size: 60px;
   width: 40px;
