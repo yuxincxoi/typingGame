@@ -10,11 +10,8 @@ const typingSentence = document.getElementById("typing-sentence");
 const totalScore = document.getElementById("total-score");
 
 const root = document.getElementById("root");
-const startBtn = document.createElement("button");
-startBtn.type = "button";
-startBtn.value = "Start";
 
-root.append(startBtn, timer);
+root.append(timer);
 
 const sentence = randomExample();
 
