@@ -1,4 +1,4 @@
-import { initTime, timer } from "../modules/initTime.js";
+import { initTime } from "../modules/initTime.js";
 import { loosingHeart } from "../modules/loosingHeart.js";
 import { randomExample } from "../modules/randomExample.js";
 
@@ -8,10 +8,6 @@ const nextSentence = document.querySelectorAll(".next-sentence");
 const typingInput = document.getElementById("typing-input");
 const typingSentence = document.getElementById("typing-sentence");
 const totalScore = document.getElementById("total-score");
-
-const root = document.getElementById("root");
-
-root.append(timer);
 
 const sentence = randomExample();
 
