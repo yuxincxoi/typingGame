@@ -25,10 +25,34 @@
   justify-content: space-around;
 }
 
-#how-to-play {
-  border: 1px solid black;
+.main-button {
+  width: 35px;
+  height: 35px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.button,
+.green-button {
+  border: none;
   width: 120px;
   height: 50px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.green-button {
+  background-color: #89c664;
+}
+
+.green-button:hover {
+  background-color: #87bc66;
+}
+
+.button:hover {
+  background-color: #e8e8e8;
 }
 
 #rules {
