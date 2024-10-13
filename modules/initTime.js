@@ -15,7 +15,7 @@ const initTime = (isGameOver = false) => {
     return; // Game Over 상태에서는 타이머를 더 이상 실행하지 않음
   }
 
-  i = 10;
+  i = 15;
   timer.innerText = `Timer : ${i}`;
   updateTimerLine(i);
 
