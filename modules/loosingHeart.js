@@ -25,7 +25,6 @@ const loosingHeart = () => {
         clearInterval(timerInterval);
         timerInterval = null;
       }
-      document.getElementById("timer").innerText = "Timer : 0";
     }
   } else if (chance === 0) {
     window.location.href = "/over";
