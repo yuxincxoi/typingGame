@@ -46,6 +46,10 @@ form.addEventListener("submit", (e) => {
     typingInput.value = "";
     // 타이머 초기화
     initTime();
+
+    if (score === 100) {
+      window.location.href = "/perfect";
+    }
   } else {
     // 입력 값이 문장과 다르면
     loosingHeart();
