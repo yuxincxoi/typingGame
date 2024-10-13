@@ -124,6 +124,13 @@
   margin-top: 20px;
 }
 
+#timer-line {
+  border-top: 5px solid #568e33;
+  width: 95%;
+  margin: auto;
+  transition: width 1s linear;
+}
+
 #typing-sentence {
   background-color: #89c664;
   height: 55px;
