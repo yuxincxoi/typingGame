@@ -22,6 +22,10 @@ app.get("/over", (req, res) => {
   res.sendFile(path.join(__dirname, "../over.html"));
 });
 
+app.get("/perfect", (req, res) => {
+  res.sendFile(path.join(__dirname, "../perfect.html"));
+});
+
 // 서버 실행
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
