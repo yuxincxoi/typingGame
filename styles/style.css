@@ -67,7 +67,8 @@
 #game-over {
   font-weight: 900;
   font-size: 70px;
-  width: 350px;
+  width: 500px;
+  text-align: center;
   margin: auto;
   padding-top: 150px;
 }
