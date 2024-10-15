@@ -22,6 +22,13 @@
   font-style: normal;
 }
 
+#perfect-root {
+  background-image: url("https://img.freepik.com/free-vector/colorful-confetti-background-with-text-space_1017-32374.jpg?t=st=1728977448~exp=1728981048~hmac=cbf2717db2f4d12f3c2ce41c443b15c108a4269c1fa0da99411e4f4c307dc5aa&w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
 #title {
   font-weight: 900;
   font-size: 80px;
