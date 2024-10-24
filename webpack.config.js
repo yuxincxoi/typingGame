@@ -1,0 +1,64 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+  entry: {
+    index: "./src/index.js", // 기본 엔트리 파일
+    app: "./src/app.js", // 다른 엔트리 파일 추가
+    over: "./src/over.js", // over.js도 번들링
+  },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].bundle.js", // 엔트리마다 다른 번들 파일 생성
+    clean: true, // 빌드 시 dist 폴더를 정리
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // 모든 .js 파일에 대한 규칙
+        exclude: /node_modules/, // node_modules 제외
+        use: {
+          loader: "babel-loader", // Babel을 통해 최신 JS 문법 지원
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.css$/, // 모든 .css 파일 처리
+        use: [MiniCssExtractPlugin.loader, "css-loader"], // CSS 파일을 별도 파일로 추출
+      },
+      {
+        test: /\.(png|jpg|gif)$/, // 이미지 파일 처리
+        type: "asset/resource", // 이미지를 dist 폴더로 복사
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./index.html", // index.html을 기준으로 번들 삽입
+      filename: "index.html", // 빌드 후의 파일명
+      chunks: ["index"], // 해당 html에 포함될 자바스크립트 번들
+    }),
+    new HtmlWebpackPlugin({
+      template: "./main.html", // main.html을 기준으로 번들 삽입
+      filename: "main.html",
+      chunks: ["app"], // app.js가 포함될 번들
+    }),
+    new HtmlWebpackPlugin({
+      template: "./over.html",
+      filename: "over.html",
+      chunks: ["over"], // over.js가 포함될 번들
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css", // CSS 파일명 설정
+    }),
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000, // 개발 서버 포트 설정
+  },
+  mode: "development", // 개발 모드 설정
+};
