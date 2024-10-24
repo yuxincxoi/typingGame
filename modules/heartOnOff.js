@@ -1,15 +1,15 @@
-import heartFull from "../public/img/heart-full.png";
-import heartEmpty from "../public/img/heart-empty.png";
+// import heartFull from "../public/img/heart-full.png";
+// import heartEmpty from "../public/img/heart-empty.png";
 
-import "../public/img/heart-empty.png";
+// import "../public/img/heart-empty.png";
 
 const heartOnOff = (chance) => {
   const firstHeart = document.getElementById("firstHeart");
   const secondHeart = document.getElementById("secondHeart");
   const thirdHeart = document.getElementById("thirdHeart");
 
-  // const heartFull = "url('./public/img/heart-full.png')";
-  // const heartEmpty = "url('./public/img/heart-empty.png')";
+  const heartFull = "url('./img/heart-full.png')";
+  const heartEmpty = "url('./img/heart-empty.png')";
 
   if (chance > 2) {
     firstHeart.style.backgroundImage = heartFull;
