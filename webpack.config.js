@@ -30,7 +30,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"], // CSS 파일을 처리하기 위한 로더
       },
       {
-        test: /\.(png|jpg|gif)$/, // 이미지 파일 처리
+        test: /\.(png|jpg|gif)$/i, // 이미지 파일 처리
         type: "asset/resource", // 이미지를 dist 폴더로 복사
       },
     ],
