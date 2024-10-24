@@ -1,6 +1,7 @@
 import { initTime } from "../modules/initTime.js";
 import { loosingHeart } from "../modules/loosingHeart.js";
 import { randomExample } from "../modules/randomExample.js";
+import "../styles/style.css";
 
 const form = document.querySelector("form");
 const prevSentence = document.getElementById("prev-sentence");

@@ -1,3 +1,5 @@
+import "../styles/style.css";
+
 const howToPlay = document.getElementById("how-to-play");
 const rules = document.getElementById("rules");
 
