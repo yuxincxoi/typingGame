@@ -1,8 +1,3 @@
-// import heartFull from "../public/img/heart-full.png";
-// import heartEmpty from "../public/img/heart-empty.png";
-
-// import "../public/img/heart-empty.png";
-
 const heartOnOff = (chance) => {
   const firstHeart = document.getElementById("firstHeart");
   const secondHeart = document.getElementById("secondHeart");
