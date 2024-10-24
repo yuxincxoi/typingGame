@@ -20,14 +20,14 @@ const loosingHeart = () => {
     } else {
       // 생명이 다된 경우
       initTime(true);
-      window.location.href = "/over";
+      window.location.href = "/over.html";
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
       }
     }
   } else if (chance === 0) {
-    window.location.href = "/over";
+    window.location.href = "/over.html";
     if (timerInterval) {
       clearInterval(timerInterval);
       timerInterval = null;
