@@ -26,8 +26,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/, // 모든 .css 파일 처리
-        use: [MiniCssExtractPlugin.loader, "css-loader"], // CSS 파일을 별도 파일로 추출
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"], // CSS 파일을 처리하기 위한 로더
       },
       {
         test: /\.(png|jpg|gif)$/, // 이미지 파일 처리
@@ -52,7 +52,7 @@ module.exports = {
       chunks: ["over"], // over.js가 포함될 번들
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css", // CSS 파일명 설정
+      filename: "styles.css", // 번들된 CSS 파일 이름
     }),
   ],
   devServer: {
