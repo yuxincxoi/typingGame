@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js", // 엔트리마다 다른 번들 파일 생성
+    filename: "[name].js", // 엔트리마다 다른 번들 파일 생성
     clean: true, // 빌드 시 dist 폴더를 정리
   },
   module: {
@@ -56,9 +56,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 9000, // 개발 서버 포트 설정
+    static: {
+      directory: path.resolve(__dirname, "dist"), // 정적 파일을 제공하는 디렉토리
+    },
+    port: 3000, // 개발 서버 포트 설정
   },
   mode: "development", // 개발 모드 설정
 };
